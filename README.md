@@ -337,18 +337,36 @@ sed -n -e '1,5p' file23
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
-
+```
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+```
 
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
-
+```
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+```
 
 
 seq 10 
 ## OUTPUT
-
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
 
 
 seq 10 | sed -n '4,6p'
@@ -358,29 +376,54 @@ seq 10 | sed -n '4,6p'
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
-
+```
+4
+5
+6
+```
 
 
 seq 3 | sed '2a hello'
 ## OUTPUT
-
+```
+1
+2
+hello
+3
+```
 
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-
+```
+1
+hello
+2
+```
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
+```
+1
+hello 10
+```
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
-
+```
+$1001 | Ram | 10000 | HR
+$1002 | tom |  5000 | Admin
+$1003 | Joe |  7000 | Developer
+```
 
 
 sed -n '2,4{s/$/*/;p}' file23
-
+## OUTPUT
+```
+1001 | Ram | 10000 | HR*
+1002 | tom |  5000 | Admin*
+1003 | Joe |  7000 | Developer*
+```
 
 #Sorting File content
 cat > file21
@@ -393,7 +436,14 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
+```
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1004 | Sit |  7000 | Dev
+1005 | Sam |  5000 | HR
 
+```
 
 cat > file22
 ```
@@ -406,13 +456,26 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
-
+```
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+``
 
 
 #Using tr command
 
-cat file23 | tr [:lower:] [:upper:]
- ## OUTPUT
+cat file22 | tr [:lower:] [:upper:]
+## OUTPUT
+```
+1001 | RAM | 10000 | HR
+1001 | RAM | 10000 | HR
+1002 | TOM |  5000 | ADMIN
+1003 | JOE |  7000 | DEVELOPER
+1005 | SAM |  5000 | HR
+1004 | SIT |  7000 | DEV
 
 cat < urllist.txt
 ```
