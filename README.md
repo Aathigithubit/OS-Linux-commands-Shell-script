@@ -24,19 +24,16 @@ Testing the commands for the desired output.
 ### Create the following files file1, file2 as follows:
 cat > file1
 ```
-chanchal singhvi
-c.k. shukla
-s.n. dasgupta
-sumit chakrobarty
+Preethi
+Farhana
+Zafreen
 ^d
 ```
 cat > file2
 ```
-anil aggarwal
-barun sengupta
-c.k. shukla
-lalit chowdury
-s.n. dasgupta
+Gayathri
+Mahalakshmi
+Hemavathy
 ^d
 ```
 ### Display the content of the files
