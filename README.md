@@ -155,7 +155,9 @@ hello world
 
 grep -v hello newfile 
 ## OUTPUT
-
+```
+Hello world
+```
 
 
 cat newfile | grep -i "hello"
@@ -200,60 +202,93 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
+```
+Hello world
+hello world
+```
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
+```
+Hello world
+hello world
+```
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
+```
+Hello world
+hello world
+```
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
 
-
+```
+hello world
+```
 
 egrep '(world$)' newfile 
 ## OUTPUT
-
+```
+Hello world
+hello world
+```
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+```
+Linux is best in this World
+```
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
+```
+Hello world
+hello world
+Linux is best in this World
+```
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
+```
+Linux is world number 1
+```
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+```
+Linux is world number 1
+```
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+```
+Linux is best in this World
+```
 
 egrep l{2} newfile
 ## OUTPUT
-
+```
+Hello world
+hello world
+```
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+```
+Linux is world number 1
+Unix is predecessor
+Linux is best in this World
+```
 
 cat > file23
 ```
@@ -371,15 +406,17 @@ seq 10
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
-
+```
+4
+5
+6
+```
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 ```
-4
-5
-6
+sed: no address after comma
 ```
 
 
@@ -492,18 +529,39 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
+```
+www.yahoo.com
+www.google.com
+www.mrcet....com
+```
 
-
- 
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-
+```
+www.yahoo.com
+www.google.com
+www.mrcet.com
+```
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-
+```
+bench.py
+file
+file1
+file11
+file2
+file21
+file22
+file23
+hello.c
+hello.js
+newfile
+readme.txt
+urllist.txt
+```
 
 mkdir backupdir
  
@@ -511,16 +569,46 @@ mv backup.tar backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-
+```
+-rw-r--r-- root/root       114 2020-07-05 23:17:07 bench.py
+-rw-r--r-- root/root         0 2024-02-21 13:41:13 file
+-rw-r--r-- root/root        24 2024-02-21 13:28:46 file1
+-rw-r--r-- root/root        29 2024-02-21 13:32:34 file11
+-rw-r--r-- root/root        31 2024-02-21 13:29:10 file2
+-rw-r--r-- root/root       131 2024-02-21 15:53:13 file21
+-rw-r--r-- root/root       155 2024-02-21 15:54:56 file22
+-rw-r--r-- root/root       210 2024-02-21 21:18:35 file23
+-rw-r--r-- root/root        76 2020-07-03 14:45:56 hello.c
+-rw-r--r-- root/root        22 2020-06-26 14:57:33 hello.js
+-rw-r--r-- root/root        96 2024-02-21 21:09:36 newfile
+-rw-r--r-- root/root       151 2020-07-05 23:19:13 readme.txt
+-rw-r--r-- root/root        52 2024-02-21 21:21:17 urllist.txt
+```
 
 tar -xvf backup.tar
 ## OUTPUT
-
+```
+bench.py
+file
+file1
+file11
+file2
+file21
+file22
+file23
+hello.c
+hello.js
+newfile
+readme.txt
+urllist.txt
+```
 gzip backup.tar
 
 ls .gz
 ## OUTPUT
- 
+```
+ls: .gz: No such file or directory
+```
 gunzip backup.tar.gz
 ## OUTPUT
 
