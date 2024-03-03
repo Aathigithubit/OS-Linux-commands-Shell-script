@@ -1319,7 +1319,7 @@ $ ./exread.sh
 ## OUTPUT
 ```
 Enter your name: preethi
-Hello vasanth, welcome to my program.
+Hello preethi, welcome to my program.
 
 ```
 
@@ -1337,7 +1337,7 @@ $ ./exread1.sh
 ## OUTPUT
 ```
 Enter your name: preethi
-Hello vasanth, welcome to my program.
+Hello preethi, welcome to my program.
 ```
 cat funcex.sh
 ```bash
