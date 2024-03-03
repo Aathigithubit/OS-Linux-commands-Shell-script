@@ -503,8 +503,8 @@ uniq file22
 
 
 #Using tr command
-
-cat file22 | tr [:lower:] [:upper:]
+cat file23 | tr [:lower:] [:upper:]
+ ```
 ## OUTPUT
 ```
 1001 | RAM | 10000 | HR
@@ -513,6 +513,9 @@ cat file22 | tr [:lower:] [:upper:]
 1003 | JOE |  7000 | DEVELOPER
 1005 | SAM |  5000 | HR
 1004 | SIT |  7000 | DEV
+1003 | JOE |  7000 | DEVELOPER
+1001 | RAM | 10000 | HR
+
 ```
 
 cat < urllist.txt
