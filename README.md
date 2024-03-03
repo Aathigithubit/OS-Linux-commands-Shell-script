@@ -499,9 +499,9 @@ uniq file22
 1003 | Joe |  7000 | Developer
 1005 | Sam |  5000 | HR
 1004 | Sit |  7000 | Dev
-``
+```
 
-
+```
 #Using tr command
 cat file23 | tr [:lower:] [:upper:]
  ```
