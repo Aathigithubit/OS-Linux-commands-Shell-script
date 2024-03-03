@@ -501,10 +501,10 @@ uniq file22
 1004 | Sit |  7000 | Dev
 ```
 
-```
+
 #Using tr command
 cat file23 | tr [:lower:] [:upper:]
- ```
+ 
 ## OUTPUT
 ```
 1001 | RAM | 10000 | HR
