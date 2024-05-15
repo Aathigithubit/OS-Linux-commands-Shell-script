@@ -592,6 +592,7 @@ tar -tvf backup.tar
 tar -xvf backup.tar
 ## OUTPUT
 ```
+localhost:~# tar -xvf backup.tar
 bench.py
 file
 file1
